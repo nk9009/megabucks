@@ -1,0 +1,341 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #000;
+    background-color: #000;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+li{
+    list-style: none;
+}
+
+/* --------------------- header ----------------------- */
+header{
+    position: relative;
+    display: flex;
+}
+.header_video video{
+    position: absolute;
+    width: 100%;
+    opacity: 0.5;
+}
+header .logo{
+    flex: 3;
+    z-index: 100;
+    padding: 20px;
+    text-align: center;
+}
+header .logo img{
+    border: 5px solid black;
+}
+/*-------------header 메뉴 슬라이드--------------*/
+.gnb{flex:9;margin:auto;}
+.gnb>ul{display:flex;justify-content:flex-end;}
+/* .gnb>ul{width:1000px;height:40px;margin:auto;} */
+.gnb>ul>li{font-size:20px;
+        width:17%;height:40px;line-height:40px;text-align:center;position:relative;}
+.gnb>ul>li>a{display:block;height:40px;color:#fff}
+.gnb ul ul{padding-top:20px;width:100%;position:absolute;left:0;top:40px;background:#000;display:none}
+.nav_bg{width:100%;height:240px;background:#000;display:none}
+
+.gnb ul ul li{border-right: 1px solid #fff;}
+.gnb ul ul li a{color:#fff;transition:opacity 0.15s}
+.gnb ul ul li a:hover{opacity: 0.5;}
+
+/*-------------header 메인텍스트--------------*/
+.header_text{
+    position: absolute;
+    top: 400px;
+    left: 350px;
+    text-align: center;
+    line-height: 56px;
+    color: #fff;
+}
+.header_text > h1{
+    font-size: 48px;
+    font-weight: lighter;
+}
+.header_text > div{
+    font-size: 20px;
+}
+
+/* main */
+.section1{
+    margin-top : 700px;
+    background: #000;
+    display: flex;
+    width: 100%;
+    height: 600px;
+}
+.section1_text{
+    flex:1;
+    margin: auto;
+    text-align: right;
+    padding-right: 40px;
+    font-size: 20px;
+    line-height: 48px;
+    font-weight: lighter;
+    cursor: pointer;
+    color: #E1E1E1;
+}
+.section1_img{
+    flex:1;
+}
+.section1_img img{
+    width: 100%;
+    height: 100%;
+}
+
+.section2{
+    background: #9bcaca;
+    width: 100%;
+    height: 750px;
+    padding: 40px;
+}
+.title{
+    font-size: 14px;
+    color: #000;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+.h2{
+    font-size: 28px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    color: rgb(73, 73, 73);
+}
+.section2 > .stores{
+    display: flex;
+}
+.section2 > .stores > div{
+    flex: 1;
+    padding: 20px;
+    height: 400px;
+    transition: background 0.15s;
+}
+.section2 > .stores > div:not(:last-child){
+    margin-right: 20px;
+}
+.section2 > .stores > div:hover{
+    background: rgb(73, 73, 73);
+}
+
+.section2 > .stores > div > p{
+    font-size: 20px;
+    color: rgb(73, 73, 73);
+    font-weight: lighter;
+}
+.section2 > .stores > div > h3{
+    font-size: 24px;
+    color: rgb(73, 73, 73);
+    font-weight: lighter;
+
+}
+
+.section3{
+    background-image: url(../images/cafe.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 500px;
+    text-align: left;
+    padding-top: 180px;
+    padding-left: 700px;
+}
+.section3 > .title{
+    background-color: rgba(214, 214, 214, 0.7);
+    padding-left: 20px;
+    padding-top: 18px;
+    border-top-left-radius: 20px;
+}
+.section3 > h2{
+    padding-bottom: 20px;
+    background-color: rgba(214, 214, 214, 0.7);
+    padding-left: 20px;
+
+}
+.section3 > p:last-child{
+    color: rgb(39, 99, 66);
+    font-size: 20px;
+    background-color: rgba(214, 214, 214, 0.7);
+    padding-left: 20px;
+    padding-bottom: 20 px;
+    border-bottom-left-radius: 20px;
+}
+
+.section4{
+        background: #000;
+        width: 100%;
+        height: 500px;
+        padding: 40px;
+}
+.section4 > .title{
+    color: #9bcaca;
+}
+.section4 > .h2, h2, p{
+    color: #E1E1E1;
+}
+/* ----------------------- 탭 메뉴---------------------*/
+.section4 .blind{position:absolute;left:-9999px;height:-9999px}
+
+.tab_menu{width:100%;height:300px;position:relative;}
+.tab_menu a{display:block;height:100%;text-align:center;line-height:40px;
+            font-size:16px;font-weight:bold;color:#fff;cursor:pointer;}
+.list1{width:150px;height:40px;background:#9bcaca;border-top-left-radius: 10px;border-top-right-radius: 10px;
+            position:absolute;top:0;left:0}
+.list2{width:150px;height:40px;background:rgb(39, 99, 66);border-top-left-radius: 10px;border-top-right-radius: 10px;
+            position:absolute;top:0;left:150px}
+.tab1{width:100%;height:260px;background:#000;
+            position:absolute;left:0;top:41px}
+.tab2{width:100%;height:260px;background:#000;
+            position:absolute;left:0;top:41px;display:none}
+/* 탭 메뉴 컨테이너 */
+.tab_menu{
+}
+.tab1{
+}
+.tab_container{
+    display: flex;
+}
+.tab_container div{
+    flex: 1;
+    width: 180px;
+    height: 180px;
+    /* transition: transform 0.3s; */
+    /* background-color: red; */
+}
+/*css로 이미지 확대 애니메이션 만들기*/
+/* .tab_container div:hover{
+    transform: scale(1.1, 1.1);
+
+} */
+.tab_container div:not(:nth-child(3)){
+    margin-right: 20px;
+}
+.tab_container div img{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+}
+.tab_container > div > p:nth-child(even){
+    color: #9bcaca;
+    text-align: left;
+    font-size: 13px;
+    font-weight: bold;
+}
+.tab_container > div > p:nth-child(odd){
+    color: #E1E1E1;
+    text-align: left;
+}
+/* ----------------------- 탭 메뉴 끝---------------------*/
+
+.section5 {
+    width: 100%;
+    height: 300px;
+    padding: 40px;
+    display: flex;
+    background: #000;
+    align-items: center;
+}
+.section5 .qna{
+    flex: 9;
+    background-image: url(../images/laptop.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.section5 > .qna > div{
+    margin-left: 80px;
+    cursor: pointer;
+    text-align: center;
+    transition: opacity 0.15s;
+}
+.section5 .qna div:hover{
+    opacity: 0.5;
+}
+.section5 .qna p{
+    color: rgb(73, 73, 73);
+}
+.section5 i{
+    font-size: 50px;
+    color: rgb(73, 73, 73);
+}
+.section5 .sns{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+.section5 .sns a{
+    margin-bottom: 5px;
+}
+.sns .sns_container{
+    display: flex;
+    margin-bottom: 5px;
+}
+.sns .sns_container img{
+    width: 55px;
+    height: 55px;
+}
+.sns .sns_container div{
+    margin-left: 10px;
+}
+.sns .sns_container div .hashtags{
+    color: #9bcaca;
+    font-size: 13px;
+}
+
+
+/*--------------------footer ----------------------*/
+
+footer{
+    margin-top: 100px;
+    padding: 50px;
+    background: rgb(39, 99, 66);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 120px;
+}
+footer img{
+    object-fit: contain;
+    background-color: #000;
+    border: 5px solid black;
+}
+footer .logo_container{
+    display: flex;
+}
+footer > .logo_container > div{
+    margin-left: 50px;
+}
+footer > .logo_container > div > p:nth-child(2){
+    color: #9bcaca;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+footer .search_container{
+    display: flex;
+    border: 1px solid #E1E1E1;
+    padding: 8px 20px;
+    border-radius: 3px;
+}
+footer > .search_container > span{
+    color: #E1E1E1;
+    margin-right: 10px;
+}
+footer > .search_container > input{
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid #E1E1E1;
+}
